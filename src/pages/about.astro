@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SkillCard from '../components/SkillCard.astro';
+import { skills } from '../data/skills';
+import { FaLinkedin } from 'react-icons/fa';
+import { Image } from 'astro:assets';
+import myImage from '../assets/me.png';
+---
+
+<Layout title="About">
+    <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/3">
+          <Image 
+            src={myImage} 
+            alt="Your Name" 
+            class="rounded-lg shadow-lg"
+            width={400}
+            height={400}
+            format="WebP"
+          />
+        </div>
+        <div class="md:w-2/3">
+            <h1 class="text-4xl font-bold mb-8">
+                About Me
+                <a href="https://linkedin.com/in/kelvin-aliche"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+                >
+                    <FaLinkedin size={24} />
+                </a>
+            </h1>
+            
+            <p class="text-lg text-gray-700 mb-6">
+                I am a passionate engineer and entrepreneur with expertise in data engineering, IoT, and smart agriculture. With a Bachelor of Engineering in Information Technology, I excel at blending technology with innovation. I've developed climate-smart agricultural systems, co-led digital transformation projects, and created impactful prototypes like a smart timing system.
+            </p>
+            
+            <p class="text-lg text-gray-700 mb-8">
+                As a podcast host of The Entrepreneur's Diary, I share insights from founders, investors, and visionaries. From earning second place in the Tahko student competition to spearheading initiatives like EU4Dual, my journey reflects resilience and a commitment to learning. Now, I'm eager to apply my skills in shaping a sustainable, data-driven future.
+            </p>
+
+            <h2 class="text-2xl font-bold mb-4">Tools</h2>
+            <div class="flex flex-wrap gap-4">
+                {skills.map(skill => <SkillCard skill={skill} />)}
+            </div>
+        </div>
+    </div>
+</Layout>

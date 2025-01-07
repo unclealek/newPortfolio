@@ -1,0 +1,63 @@
+---
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiMongodb,
+  SiDocker,
+  SiKubernetes,
+  SiApachekafka,
+  SiApachespark,
+  SiTensorflow,
+  SiScikitlearn,
+  SiPandas,
+  SiFastapi,
+  SiGooglecloud,
+  SiJenkins,
+  SiMysql,
+  SiSnowflake
+} from 'react-icons/si';
+interface Props {
+  skill: {
+    icon: string;
+    style?: string;
+    size?: number;
+  };
+}
+
+const { skill } = Astro.props;
+const IconMap = {
+  SiJavascript,
+  SiReact,
+  SiTypescript,
+  SiPython,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiMongodb,
+  SiDocker,
+  SiKubernetes,
+  SiApachekafka,
+  SiApachespark,
+  SiTensorflow,
+  SiScikitlearn,
+  SiPandas,
+  SiFastapi,
+  SiGooglecloud,
+  SiJenkins,
+  SiMysql,
+  SiSnowflake
+  // Add other icons to the map
+};
+const IconComponent = IconMap[skill.icon as keyof typeof IconMap];
+---
+
+<div class="hover:shadow-lg transition-shadow">
+  
+    <div class={ skill.style }>
+      <IconComponent size={skill.size || 24} />
+    </div>
+    
+</div>

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Image } from 'astro:assets';
+//import myImage from '../assets/me.png';
+import myImage from '../assets/imgg.JPG'; 
+---
+
+<Layout title="Your Portfolio">
+  <main class="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center justify-between">
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-5xl font-bold leading-tight">
+        Hi, I am <br/>
+        <span class="text-blue-600">Aleksandra<br/>Kelvin Aliche</span>
+      </h1>
+      
+      <p class="text-2xl text-gray-600">
+        Software Engineer | Data Engineer
+      </p>
+      
+      <p class="text-lg text-gray-500">
+        I am a passionate Software Engineer and Data Engineer with expertise in building scalable applications and data pipelines. My journey in tech started with a curiosity about how things work, which evolved into a career building robust and efficient solutions.
+        With experience in both software development and data engineering, I enjoy creating high-performance applications while ensuring data-driven insights drive business value.      </p>
+      
+      <div class="flex gap-4">
+        <a
+          href="https://github.com/unclealek"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-600 hover:text-blue-600 transition-colors"
+        >
+          <FaGithub size={28} />
+        </a>
+        <a
+          href="https://linkedin.com/in/kelvin-aliche"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-600 hover:text-blue-600 transition-colors"
+        >
+          <FaLinkedin size={28} />
+        </a>
+      </div>
+    </div>
+
+    <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+      <div class="relative w-[300px] h-[300px] rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105">
+        <Image
+          src={myImage}
+          alt="Kelvin Aliche"
+          width={400}
+          height={400}
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .rounded-full {
+    border-radius: 50%;
+  }
+</style>
