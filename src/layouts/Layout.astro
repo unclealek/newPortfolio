@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+
 interface Props {
   title: string;
 }
@@ -15,14 +16,19 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Your Portfolio Website" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/blog.css" />
     <link rel="icon" type="image/jpeg" href="/icon.jpg" />
+    <link rel="think" type="image/jpeg" href="/think.png" />
+    <link rel="image" type="image/jpeg" href="/Rag1.jpg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
     <main class="container mx-auto px-4 py-8">
+      <article class="essay-content">
       <slot />
+    </article>
     </main>
     <Footer />
   </body>
