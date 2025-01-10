@@ -13,10 +13,11 @@ What is the AI-Powered Research Assistant?
 ```
 
 The AI-Powered Research Assistant revolutionizes document analysis by utilizing Retrieval-Augmented Generation (RAG) architecture. Designed to streamline research processes, this system intelligently processes and analyzes vast amounts of academic content with precision and efficiency.
+```
 
-## Core Features That Define Excellence
+**Core Features That Define Excellence**
 
-### Document Processing: Making Sense of Complex Data
+Document Processing: Making Sense of Complex Data
 The Research Assistant incorporates advanced techniques to handle a variety of documents:
 
 1. PDF Parsing and Cleaning: Extracts clean, structured text from PDFs using PDFPlumber.
@@ -54,6 +55,8 @@ RAG architecture enables powerful question-answering capabilities:
 3. transformers: Supports advanced natural language processing tasks.
 
 4. streamlit (planned): Provides a user-friendly web interface.
+```
+
 <div style="width: 50%; height: 300px; overflow: hidden;">
   <img 
     src="/Rag1.gif" 
@@ -61,6 +64,7 @@ RAG architecture enables powerful question-answering capabilities:
     style="width: 100%; height: 90%; object-fit: cover;"
   />
 </div>
+
 
 
 ## How It Works: System Architecture
@@ -117,3 +121,4 @@ RAG systems blend the strengths of retrieval and generative AI to offer unparall
 
 The AI-Powered Research Assistant redefines how researchers interact with academic content. By combining cutting-edge technology with a user-centric approach, it simplifies complex processes and maximizes productivity. Whether you're an academic, professional, or organization, embracing this system is a step toward smarter, faster research.
 
+```
