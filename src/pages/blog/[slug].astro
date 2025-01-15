@@ -1,6 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/BlogLayout.astro';
 import { getCollection } from 'astro:content';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 
 // Generate static paths for all blog posts
 export async function getStaticPaths() {
@@ -16,7 +18,7 @@ const { post } = Astro.props;
 // Render the post content
 const { Content } = await post.render();
 ---
-
+<Header />
 <Layout title={post.data.title}>
   <article class="max-w-4xl mx-auto py-8">
     <h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
@@ -35,3 +37,4 @@ const { Content } = await post.render();
     </div>
   </article>
 </Layout>
+<Footer />

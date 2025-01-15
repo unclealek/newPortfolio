@@ -1,0 +1,53 @@
+---
+// Remove the BaseLayout import since we want to handle the layout directly here
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Your Portfolio Website" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/blog.css" />
+    <link rel="icon" type="image/jpeg" href="/icon.jpg" />
+    <link rel="think" type="image/jpeg" href="/think.png" />
+    <link rel="image" type="image/jpeg" href="/Rag1.jpg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+   
+    <main class="container mx-auto px-4 py-8">
+      <article class="prose prose-xl max-w-4xl mx-auto">
+        <slot />
+      </article>
+    </main>
+   
+  </body>
+</html>
+
+<style is:global>
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+</style>
